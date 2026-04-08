@@ -23,7 +23,7 @@ def square_root(a):
         raise ValueError
     return math.sqrt(a)
 def hypotenuse(a, b):
-    math.hypot(a, b)
+    return math.hypot(a, b)
 
 def subtract(a, b):
     return a - b

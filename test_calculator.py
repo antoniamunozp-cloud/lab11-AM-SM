@@ -1,32 +1,33 @@
-#https://github.com/antoniamunozp-cloud/lab11-AM-SM.git
-#Partner 1: Antonia Munoz Paez
-#Partner 2: Saisha Mahindroo
+# https://github.com/antoniamunozp-cloud/lab11-AM-SM.git
+# Partner 1: Antonia Munoz Paez
+# Partner 2: Saisha Mahindroo
 import unittest
 from calculator import *
 
+
 class TestCalculator(unittest.TestCase):
 
-    def test_add(self): # 3 assertions
+    def test_add(self):  # 3 assertions
         self.assertEqual(add(1, 2), 3)
         self.assertEqual(add(3, 2), 5)
         self.assertEqual(add(1, 3), 4)
 
-    def test_subtract(self): # 3 assertions
+    def test_subtract(self):  # 3 assertions
         self.assertEqual(subtract(1, 2), -1)
         self.assertEqual(subtract(4, 2), 2)
         self.assertEqual(subtract(2, 2), 0)
 
-
     ######## Partner 1
-    def test_multiply(self): # 3 assertions
+    def test_multiply(self):  # 3 assertions
         self.assertEqual(mul(5, 10), 50)
         self.assertEqual(mul(1, 0), 0)
         self.assertEqual(mul(-5, 3), -15)
 
-    def test_divide(self): # 3 assertions
+    def test_divide(self):  # 3 assertions
         self.assertEqual(div(2, 10), 5)
         self.assertEqual(div(5, 0), 0)
         self.assertEqual(div(4, 2), 0.5)
+
     # ##########################
 
     ######## Partner 2
@@ -34,33 +35,31 @@ class TestCalculator(unittest.TestCase):
         with self.assertRaises(ZeroDivisionError):
             div(0, 10)
 
-
     def test_logarithm(self):
         def test_logarithm(self):
             self.assertAlmostEqual(logarithm(8, 2), 3)
-
 
     def test_log_invalid_base(self):
         with self.assertRaises(ValueError):
             logarithm(1, 10)
 
-    
     ######## Partner 1
-    def test_log_invalid_argument(self): # 1 assertion
+    def test_log_invalid_argument(self):  # 1 assertion
         with self.assertRaises(ValueError):
             logarithm(10, -5)
 
-    def test_hypotenuse(self): # 3 assertions
-        self.assertAlmostEqual((hypotenuse(3, 4)), 5)
-        self.assertAlmostEqual((hypotenuse(-3, -4)), 5)
-        self.assertEqual((hypotenuse(-3, 4)), 5)
+    def test_hypotenuse(self):  # 3 assertions
+        self.assertEqual((hypotenuse(3, 4)), 5)
+        self.assertAlmostEqual((hypotenuse(5, 12)), 13)
+        self.assertAlmostEqual((hypotenuse(8, 15)), 17)
 
-    def test_sqrt(self): # 3 assertions
+    def test_sqrt(self):  # 3 assertions
         with self.assertRaises(ValueError):
-             square_root(-1)
+            square_root(-1)
         self.assertEqual(square_root(25), 5)
         self.assertEqual(square_root(81), 9)
     ##########################
+
 
 # Do not touch this
 if __name__ == "__main__":
