@@ -21,8 +21,6 @@ def div(a, b):
 def exp (a,b):
     return math.exp(a)
 
-
-
 def square_root(a):
     if a < 0:
         raise ValueError
