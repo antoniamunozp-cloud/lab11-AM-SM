@@ -1,9 +1,6 @@
-"""
-calculator.py
-- Defines functions used to create a simple calculator
-
-One function per operation, in order.
-"""
+#https://github.com/antoniamunozp-cloud/lab11-AM-SM.git
+#Partner 1: Antonia Munoz Paez
+#Partner 2: Saisha Mahindroo
 import math
 
 
@@ -15,7 +12,7 @@ def mul(a, b):
     return a * b
 def div(a, b):
     if a == 0:
-        return "Error"
+        raise ZeroDivisionError
     return b/a
 
 def exp (a,b):
